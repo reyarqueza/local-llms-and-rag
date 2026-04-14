@@ -66,9 +66,9 @@ A second-stage relevance step that reorders retrieved candidates using a more ac
 
 ## How To Read This Book
 
-The chapters are organized from foundations to production practice. The early chapters define the core building blocks: local inference, embeddings, vector stores, and the basic RAG loop. The middle chapters focus on system design: ingestion, retrieval, reranking, prompt construction, and context management. The later chapters cover evaluation, operations, and emerging directions.
+The chapters are organized from prerequisites to production practice. Chapter 0 defines the AI and retrieval terminology used throughout the manuscript. The early numbered chapters then define the core building blocks: local inference, embeddings, vector stores, and the basic RAG loop. The middle chapters focus on system design: ingestion, retrieval, reranking, prompt construction, and context management. The later chapters cover evaluation, operations, and emerging directions.
 
-Readers who want a quick implementation path can move first through Chapters 2 through 5 and then return to evaluation and operations before shipping anything important. Readers designing an internal platform should read the book in order, because operational concerns and evaluation strategy influence architecture much earlier than many teams expect.
+Readers who want a quick implementation path should start with Chapter 0 and then move through Chapters 2 through 5 before returning to evaluation and operations. Readers designing an internal platform should read the book in order, because operational concerns and evaluation strategy influence architecture much earlier than many teams expect.
 
 ## What This Book Does Not Assume
 

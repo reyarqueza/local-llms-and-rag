@@ -11,6 +11,7 @@ local-llms-and-rag/
   metadata.yaml
   book.md
   chapters/
+    00-ai-prerequisites.md
     01-introduction.md
     02-local-llms.md
     03-embeddings-and-vector-databases.md

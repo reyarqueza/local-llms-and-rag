@@ -1,5 +1,6 @@
 # Outline
 
+0. AI Prerequisites
 1. Introduction
 2. Running LLMs Locally
 3. Embeddings and Vector Databases

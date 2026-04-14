@@ -11,6 +11,8 @@ The intended reader is an engineer or technical lead who wants to build useful s
 \newpage
 
 ```{=include}
+chapters/00-ai-prerequisites.md
+
 chapters/01-introduction.md
 
 chapters/02-local-llms.md
