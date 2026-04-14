@@ -1,0 +1,9 @@
+%%{init: {'theme': 'base', 'flowchart': {'nodeSpacing': 42, 'rankSpacing': 58, 'padding': 8}, 'themeVariables': {'fontSize': '20px', 'primaryColor': '#eef6f4', 'primaryTextColor': '#1f2937', 'primaryBorderColor': '#4b5563', 'lineColor': '#4b5563', 'secondaryColor': '#dbeafe', 'tertiaryColor': '#f8fafc'}}}%%
+flowchart LR
+    A[User Query] --> B[Query Processing]
+    B --> C[Retriever]
+    C --> D[Reranker]
+    D --> E[Prompt Assembly]
+    E --> F[Local LLM]
+    F --> G[Grounded Response]
+    H[(Vector Store)] --> C

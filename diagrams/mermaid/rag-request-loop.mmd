@@ -1,0 +1,10 @@
+%%{init: {'theme': 'base', 'flowchart': {'nodeSpacing': 40, 'rankSpacing': 55, 'padding': 8}, 'themeVariables': {'fontSize': '20px', 'primaryColor': '#fef3e7', 'primaryTextColor': '#1f2937', 'primaryBorderColor': '#4b5563', 'lineColor': '#4b5563', 'secondaryColor': '#e0f2fe', 'tertiaryColor': '#f8fafc'}}}%%
+flowchart LR
+    A[User Question] --> B[Embed or Rewrite Query]
+    B --> C[Retrieve Candidate Chunks]
+    C --> H{Enough Relevant Evidence?}
+    H -- Yes --> D[Select Evidence]
+    D --> E[Assemble Prompt]
+    E --> F[Generate Answer]
+    F --> G[Citations or Uncertainty]
+    H -- No --> I[Clarify or Refuse]

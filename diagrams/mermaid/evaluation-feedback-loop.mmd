@@ -1,0 +1,11 @@
+%%{init: {'theme': 'base', 'flowchart': {'nodeSpacing': 40, 'rankSpacing': 55, 'padding': 8}, 'themeVariables': {'fontSize': '20px', 'primaryColor': '#f5f3ff', 'primaryTextColor': '#1f2937', 'primaryBorderColor': '#4b5563', 'lineColor': '#4b5563', 'secondaryColor': '#e0f2fe', 'tertiaryColor': '#f8fafc'}}}%%
+flowchart LR
+    A[Representative Queries] --> B[Run Pipeline Variants]
+    B --> C[Measure Retrieval and Answer Quality]
+    C --> D[Human Review on Risky Cases]
+    D --> E[Diagnose Failure Source]
+    E --> F[Adjust Retrieval, Prompt, or Model]
+    F --> G[Update Test Set]
+    G --> A
+    C --> H[Production Monitoring]
+    H --> G

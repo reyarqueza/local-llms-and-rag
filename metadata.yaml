@@ -1,0 +1,16 @@
+title: "Building with Local LLMs and RAG"
+subtitle: "Practical Patterns for Retrieval-Augmented AI Systems"
+author: "Rey Arqueza"
+date: "2026-04-09"
+lang: "en-US"
+toc: true
+toc-depth: 2
+numbersections: true
+fontsize: 11pt
+geometry: margin=1in
+colorlinks: true
+linkcolor: blue
+urlcolor: blue
+header-includes:
+  - \usepackage{graphicx}
+  - \usepackage{float}

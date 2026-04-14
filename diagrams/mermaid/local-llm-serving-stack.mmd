@@ -1,0 +1,12 @@
+%%{init: {'theme': 'base', 'flowchart': {'nodeSpacing': 40, 'rankSpacing': 55, 'padding': 8}, 'themeVariables': {'fontSize': '20px', 'primaryColor': '#f4efe4', 'primaryTextColor': '#1f2937', 'primaryBorderColor': '#475569', 'lineColor': '#475569', 'secondaryColor': '#e2e8f0', 'tertiaryColor': '#eef2ff'}}}%%
+flowchart LR
+    A[Application Layer] --> B[Inference API]
+    B --> C[Scheduler and Batching]
+    C --> D[Tokenizer]
+    D --> E[Quantized Model Weights]
+    E --> F[GPU or CPU Memory]
+    F --> G[Token Generation]
+    G --> H[Streamed Response]
+    I[Observability and Metrics] --> B
+    I --> C
+    I --> G
