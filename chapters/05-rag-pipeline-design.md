@@ -1,4 +1,16 @@
+```{=latex}
+\clearpage
+```
+
 # Designing a RAG Pipeline
+
+```{=latex}
+\begin{center}
+\includegraphics[width=\textwidth,trim=0 500 0 500,clip]{assets/images/chapter-05-rag-pipeline-design.png}
+\end{center}
+```
+
+This chapter turns the basic loop into a real system. It breaks the pipeline into ingestion, ranking, context management, and response synthesis.
 
 ## Ingestion Pipeline
 

@@ -1,4 +1,16 @@
+```{=latex}
+\clearpage
+```
+
 # Evaluation and Debugging
+
+```{=latex}
+\begin{center}
+\includegraphics[width=\textwidth,trim=0 500 0 500,clip]{assets/images/chapter-06-evaluation.png}
+\end{center}
+```
+
+This chapter shows how to measure the system and isolate where it fails. The goal is to turn iteration into a disciplined debugging loop.
 
 ## What to Measure
 

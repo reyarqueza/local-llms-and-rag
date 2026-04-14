@@ -5,6 +5,8 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 MERMAID_SRC_DIR="$ROOT_DIR/diagrams/mermaid"
 DIAGRAM_OUT_DIR="$ROOT_DIR/assets/diagrams"
+ILLUSTRATION_SRC_DIR="$ROOT_DIR/assets/images/source"
+ILLUSTRATION_OUT_DIR="$ROOT_DIR/assets/images"
 OUTPUT_PDF="$ROOT_DIR/book.pdf"
 BOOK_ENTRYPOINT="$ROOT_DIR/book.md"
 
@@ -18,6 +20,20 @@ require_cmd() {
 require_cmd pandoc
 require_cmd xelatex
 require_cmd mmdc
+
+render_illustration_png() {
+  local src="$1"
+  local out="$2"
+  local tmp_dir
+  local thumb_name
+
+  tmp_dir="$(mktemp -d "${TMPDIR:-/tmp}/local-llm-rag-illustration.XXXXXX")"
+  thumb_name="$(basename "$src").png"
+
+  qlmanage -t -s 2200 -o "$tmp_dir" "$src" >/dev/null
+  mv "$tmp_dir/$thumb_name" "$out"
+  rm -rf "$tmp_dir"
+}
 
 expand_book() {
   local source_file="$1"
@@ -60,6 +76,7 @@ expand_book() {
 }
 
 mkdir -p "$DIAGRAM_OUT_DIR"
+mkdir -p "$ILLUSTRATION_OUT_DIR"
 
 shopt -s nullglob
 mermaid_files=("$MERMAID_SRC_DIR"/*.mmd)
@@ -75,6 +92,22 @@ if [ "${#mermaid_files[@]}" -gt 0 ]; then
     mmdc -i "$src" -o "$svg_out"
     mmdc -i "$src" -o "$pdf_out" --pdfFit
   done
+fi
+
+if command -v qlmanage >/dev/null 2>&1; then
+  shopt -s nullglob
+  illustration_files=("$ILLUSTRATION_SRC_DIR"/*.svg)
+  shopt -u nullglob
+
+  if [ "${#illustration_files[@]}" -gt 0 ]; then
+    echo "Rendering chapter illustrations..."
+    for src in "${illustration_files[@]}"; do
+      base_name="$(basename "${src%.svg}")"
+      png_out="$ILLUSTRATION_OUT_DIR/$base_name.png"
+
+      render_illustration_png "$src" "$png_out"
+    done
+  fi
 fi
 
 TMP_BOOK="$(mktemp "${TMPDIR:-/tmp}/local-llm-rag-book.XXXXXX.md")"

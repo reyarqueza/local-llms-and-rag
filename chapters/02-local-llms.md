@@ -1,4 +1,16 @@
+```{=latex}
+\clearpage
+```
+
 # Running LLMs Locally
+
+```{=latex}
+\begin{center}
+\includegraphics[width=\textwidth,trim=0 500 0 500,clip]{assets/images/chapter-02-local-llms.png}
+\end{center}
+```
+
+This chapter covers the hardware and runtime constraints behind local inference. It focuses on the tradeoffs that determine whether a model is practical on your machines.
 
 ## Why Run Models Locally
 

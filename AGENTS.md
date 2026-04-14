@@ -266,8 +266,11 @@
   Diagram and build conventions
 
   - Keep editable diagram sources in `diagrams/mermaid/` as `.mmd` files and render build artefacts into `assets/diagrams/`.
+  - Keep chapter opener illustration source files in `assets/images/source/` as SVGs and render build artefacts into `assets/images/`.
   - For PDF output, reference the generated `.pdf` diagram assets from chapter files.
+  - For chapter opener illustrations in PDF output, reference the generated `.png` assets from chapter files.
   - The build must render Mermaid PDFs with `mmdc --pdfFit` so exported diagrams are cropped to the chart bounds instead of keeping excess white page space.
+  - The build may use macOS Quick Look via `qlmanage -t` to rasterize SVG illustrations into high-resolution PNGs for the PDF build.
   - Keep `book.md` as the manuscript entrypoint, but do not assume Pandoc expands the fenced ````{=include}```` block by itself. The build script should concatenate the referenced chapter files into a temporary manuscript before invoking Pandoc.
   - For inline PDF layout, prefer raw LaTeX image blocks over captioned Markdown figures when you need diagrams to stay embedded with the surrounding text instead of floating.
   - Use this inline pattern in chapter files for full-width embedded diagrams:
@@ -281,8 +284,18 @@
   ```
 
   - Keep `metadata.yaml` loading `graphicx` so inline LaTeX `\includegraphics` blocks compile correctly.
+  - Avoid depending on optional LaTeX packages unless they are already known to exist in the environment. In this repo, native LaTeX `\@startsection` redefinition worked for large chapter heading styling when `titlesec` was unavailable.
   - Mermaid diagrams should be designed for a wide, low aspect ratio so `width=\textwidth` uses the page efficiently. Prefer `flowchart LR`, larger font sizes, and generous horizontal spacing in Mermaid `init` blocks.
   - If a diagram looks too small at full width, fix the Mermaid source layout first. Do not reintroduce aggressive LaTeX height caps unless a specific diagram truly needs one.
+
+  Chapter opener conventions
+
+  - Each chapter should begin on a new page and follow a consistent opener layout: oversized chapter title, editorial illustration, then a very short 1-2 sentence chapter description.
+  - Keep the opener description minimal so the opener remains on one page and does not push body text awkwardly to the next page.
+  - Use a full-width centered image block for opener art. If the rendered image has extra top or bottom whitespace, crop it in the LaTeX embed with `trim=... ,clip` rather than shrinking the image width.
+  - The opener illustrations should use a consistent black-and-white wireframe editorial style. Keep strokes bold, fills white, and compositions simple enough to read at chapter-opening scale.
+  - The character in each chapter opener should be doing something specific to that chapter topic. Keep the visual metaphor obvious and simple.
+  - Preserve editability: store the illustration source as SVG even if the PDF build uses generated PNG artefacts.
 
   Pandoc-friendly image example
 

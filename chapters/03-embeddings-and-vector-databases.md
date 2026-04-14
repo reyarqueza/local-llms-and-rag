@@ -1,4 +1,16 @@
+```{=latex}
+\clearpage
+```
+
 # Embeddings and Vector Databases
+
+```{=latex}
+\begin{center}
+\includegraphics[width=\textwidth,trim=0 500 0 500,clip]{assets/images/chapter-03-embeddings-and-vector-databases.png}
+\end{center}
+```
+
+This chapter explains how documents become retrievable. It covers chunking, embeddings, indexing, and the storage layer that makes semantic search usable.
 
 ## What Embeddings Represent
 

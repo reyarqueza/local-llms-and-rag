@@ -1,4 +1,16 @@
+```{=latex}
+\clearpage
+```
+
 # Future Directions
+
+```{=latex}
+\begin{center}
+\includegraphics[width=\textwidth,trim=0 500 0 500,clip]{assets/images/chapter-08-future-directions.png}
+\end{center}
+```
+
+This chapter looks ahead at how retrieval systems may evolve. It surveys agentic workflows, multimodal pipelines, and on-device deployment.
 
 ## Agentic Retrieval
 

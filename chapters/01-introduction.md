@@ -1,4 +1,16 @@
+```{=latex}
+\clearpage
+```
+
 # Introduction
+
+```{=latex}
+\begin{center}
+\includegraphics[width=\textwidth,trim=0 500 0 500,clip]{assets/images/chapter-01-introduction.png}
+\end{center}
+```
+
+This chapter defines the problem space and the design lens for the rest of the book. It explains why local models and retrieval work best when treated as one system.
 
 ## Who This Book Is For
 

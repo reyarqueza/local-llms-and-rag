@@ -1,4 +1,16 @@
+```{=latex}
+\clearpage
+```
+
 # Deployment and Operations
+
+```{=latex}
+\begin{center}
+\includegraphics[width=\textwidth,trim=0 500 0 500,clip]{assets/images/chapter-07-operations.png}
+\end{center}
+```
+
+This chapter covers the operational work that makes the system dependable. It focuses on latency, observability, updates, and production safety.
 
 ## Latency and Throughput
 

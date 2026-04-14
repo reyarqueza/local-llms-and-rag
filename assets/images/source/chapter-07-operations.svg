@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <g fill="white" stroke="#111" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="110" y1="760" x2="1490" y2="760"/>
+    <rect x="860" y="250" width="470" height="270" rx="24"/>
+    <circle cx="980" cy="356" r="72"/>
+    <path d="M948 356h64"/>
+    <path d="M980 356l28-34"/>
+    <circle cx="1180" cy="356" r="72"/>
+    <path d="M1148 356h64"/>
+    <path d="M1180 356l22-18"/>
+    <rect x="948" y="548" width="294" height="58" rx="16"/>
+    <circle cx="996" cy="578" r="12"/>
+    <circle cx="1080" cy="578" r="12"/>
+    <circle cx="1164" cy="578" r="12"/>
+    <ellipse cx="438" cy="332" rx="88" ry="108"/>
+    <ellipse cx="388" cy="224" rx="24" ry="70"/>
+    <ellipse cx="490" cy="224" rx="24" ry="70"/>
+    <circle cx="410" cy="334" r="8"/>
+    <circle cx="466" cy="334" r="8"/>
+    <path d="M424 370c16 14 40 14 56 0"/>
+    <path d="M326 492c0-84 48-146 112-146 72 0 112 58 112 142v166H326z"/>
+    <path d="M564 520h118"/>
+    <circle cx="728" cy="520" r="42"/>
+    <path d="M728 484v72"/>
+    <path d="M692 520h72"/>
+    <line x1="404" y1="658" x2="356" y2="725"/>
+    <line x1="478" y1="658" x2="546" y2="725"/>
+    <rect x="246" y="580" width="90" height="58" rx="14"/>
+    <line x1="272" y1="610" x2="310" y2="610"/>
+  </g>
+</svg>

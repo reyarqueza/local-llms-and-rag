@@ -1,4 +1,16 @@
+```{=latex}
+\clearpage
+```
+
 # RAG Fundamentals
+
+```{=latex}
+\begin{center}
+\includegraphics[width=\textwidth,trim=0 500 0 500,clip]{assets/images/chapter-04-rag-basics.png}
+\end{center}
+```
+
+This chapter introduces the core retrieval-then-generation loop. The focus is on grounding, prompt construction, and the failure modes that appear first.
 
 ## The Basic RAG Loop
 

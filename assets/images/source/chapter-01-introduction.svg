@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <g fill="white" stroke="#111" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="120" y1="760" x2="1480" y2="760"/>
+    <rect x="760" y="420" width="430" height="210" rx="20"/>
+    <line x1="800" y1="630" x2="785" y2="730"/>
+    <line x1="1150" y1="630" x2="1165" y2="730"/>
+    <rect x="845" y="355" width="170" height="100" rx="14"/>
+    <polyline points="860,438 930,395 1000,438"/>
+    <rect x="1048" y="395" width="54" height="60" rx="10"/>
+    <path d="M505 430c70 0 115 55 115 128v94H410v-96c0-71 42-126 95-126z"/>
+    <ellipse cx="520" cy="285" rx="88" ry="108"/>
+    <ellipse cx="470" cy="176" rx="24" ry="70"/>
+    <ellipse cx="572" cy="176" rx="24" ry="70"/>
+    <circle cx="492" cy="286" r="8"/>
+    <circle cx="548" cy="286" r="8"/>
+    <path d="M505 320c18 14 42 14 60 0"/>
+    <path d="M620 530h90c42 0 76 34 76 76v18"/>
+    <line x1="485" y1="650" x2="420" y2="725"/>
+    <line x1="560" y1="650" x2="610" y2="725"/>
+    <path d="M346 640h90l48 98H298z"/>
+    <rect x="290" y="255" width="110" height="86" rx="18"/>
+    <line x1="320" y1="288" x2="370" y2="288"/>
+    <line x1="320" y1="320" x2="362" y2="320"/>
+    <rect x="1240" y="210" width="140" height="98" rx="18"/>
+    <line x1="1268" y1="244" x2="1342" y2="244"/>
+    <line x1="1268" y1="278" x2="1322" y2="278"/>
+    <path d="M400 290c40-38 108-55 182-55"/>
+    <path d="M1120 255c42 0 78 12 110 34"/>
+  </g>
+</svg>
