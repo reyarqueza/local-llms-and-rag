@@ -6,7 +6,7 @@
 
 ```{=latex}
 \begin{center}
-\includegraphics[width=\textwidth,trim=0 500 0 500,clip]{assets/images/chapter-01-introduction.png}
+\includegraphics[width=\textwidth,height=0.42\textheight,keepaspectratio]{assets/svg/llama-man-on-laptop.svg}
 \end{center}
 ```
 

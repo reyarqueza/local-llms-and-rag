@@ -11,7 +11,6 @@ local-llms-and-rag/
   metadata.yaml
   book.md
   chapters/
-    00-ai-prerequisites.md
     01-introduction.md
     02-local-llms.md
     03-embeddings-and-vector-databases.md
@@ -20,6 +19,7 @@ local-llms-and-rag/
     06-evaluation.md
     07-operations-and-deployment.md
     08-future-directions.md
+    09-ai-terminology.md
   assets/
     images/
     diagrams/
@@ -56,11 +56,18 @@ The generated SVG can still be used for web or repository previews.
 
 ## Requirements
 
-- `pandoc`
-- `xelatex`
+- `pandoc` via Homebrew
+- `xelatex` via BasicTeX
 - `mmdc` from Mermaid CLI
 
-Example installation for Mermaid CLI:
+Install the core PDF toolchain on macOS with Homebrew:
+
+```bash
+brew install pandoc
+brew install --cask basictex
+```
+
+Install Mermaid CLI with npm:
 
 ```bash
 npm install -g @mermaid-js/mermaid-cli

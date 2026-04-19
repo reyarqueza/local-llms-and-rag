@@ -2,7 +2,7 @@
 
 \newpage
 
-# Preface
+# Preface {-}
 
 This book is a practical guide to designing and shipping applications built on local language models, embeddings, vector search, and retrieval-augmented generation. It focuses on engineering decisions rather than hype: model selection, document preparation, retrieval quality, evaluation, and production reliability.
 
@@ -11,8 +11,6 @@ The intended reader is an engineer or technical lead who wants to build useful s
 \newpage
 
 ```{=include}
-chapters/00-ai-prerequisites.md
-
 chapters/01-introduction.md
 
 chapters/02-local-llms.md
@@ -28,4 +26,6 @@ chapters/06-evaluation.md
 chapters/07-operations-and-deployment.md
 
 chapters/08-future-directions.md
+
+chapters/09-ai-terminology.md
 ```

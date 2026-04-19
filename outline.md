@@ -1,6 +1,5 @@
 # Outline
 
-0. AI Prerequisites
 1. Introduction
 2. Running LLMs Locally
 3. Embeddings and Vector Databases
@@ -9,3 +8,4 @@
 6. Evaluation and Debugging
 7. Deployment and Operations
 8. Where the Field Is Going
+9. AI Terminology

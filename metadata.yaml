@@ -15,5 +15,5 @@ header-includes:
   - \usepackage{graphicx}
   - \usepackage{float}
   - \makeatletter
-  - \renewcommand\section{\@startsection{section}{1}{\z@}{0pt}{16pt}{\centering\normalfont\bfseries\fontsize{34}{38}\selectfont}}
+  - \renewcommand\section{\@startsection{section}{1}{\z@}{0pt}{16pt}{\raggedright\normalfont\bfseries\fontsize{34}{38}\selectfont}}
   - \makeatother

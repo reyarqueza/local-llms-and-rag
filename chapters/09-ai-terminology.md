@@ -2,21 +2,21 @@
 \clearpage
 ```
 
-# AI Prerequisites
+# AI Terminology
 
 ```{=latex}
 \begin{center}
-\includegraphics[width=\textwidth,trim=0 500 0 500,clip]{assets/images/chapter-00-prerequisites.png}
+\includegraphics[width=\textwidth,trim=0 500 0 500,clip]{assets/images/chapter-09-ai-terminology.png}
 \end{center}
 ```
 
-This chapter defines the AI vocabulary used throughout the rest of the book. It is meant to remove friction so later chapters can focus on design rather than terminology.
+This chapter gathers the AI vocabulary used across the book into one place. It works as a compact reference so readers can close with clearer definitions of the terms that appear throughout the manuscript.
 
-## Why Start With Terminology
+## Why Close With Terminology
 
 Modern AI systems are full of overlapping terms that sound intuitive but often mean something more specific in practice. A reader may know what a chatbot does, yet still be unclear on the difference between a model and an inference engine, an embedding and a vector, or retrieval and reranking.
 
-This chapter gives short, practical definitions and examples. The goal is not to be academically complete. The goal is to make the rest of the manuscript easier to read and reason about.
+This chapter gives short, practical definitions and examples. The goal is not to be academically complete. The goal is to leave the reader with a concise reference that reinforces the design and operational concepts covered earlier.
 
 ## Model Basics
 
