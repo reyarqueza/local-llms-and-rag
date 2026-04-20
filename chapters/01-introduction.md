@@ -6,7 +6,7 @@
 
 ```{=latex}
 \begin{center}
-\includegraphics[width=\textwidth,height=0.42\textheight,keepaspectratio]{assets/svg/llama-man-on-laptop.svg}
+\includegraphics[width=\textwidth,height=0.42\textheight,keepaspectratio]{assets/svg/llama-man-at-data-center.pdf}
 \end{center}
 ```
 

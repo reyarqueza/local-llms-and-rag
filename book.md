@@ -4,6 +4,12 @@
 
 # Preface {-}
 
+```{=latex}
+\begin{center}
+\includegraphics[width=\textwidth,height=0.42\textheight,keepaspectratio]{assets/svg/llama-man-on-laptop.pdf}
+\end{center}
+```
+
 This book is a practical guide to designing and shipping applications built on local language models, embeddings, vector search, and retrieval-augmented generation. It focuses on engineering decisions rather than hype: model selection, document preparation, retrieval quality, evaluation, and production reliability.
 
 The intended reader is an engineer or technical lead who wants to build useful systems on private or domain-specific data. The goal is not to present RAG as a single recipe. The goal is to show where the real tradeoffs live, what breaks first, and how to design a system that can be measured and improved over time.
