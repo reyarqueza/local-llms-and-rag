@@ -10,72 +10,17 @@
 \end{center}
 ```
 
-This chapter defines the problem space and the design lens for the rest of the book. It explains why local models and retrieval work best when treated as one system.
+## The Anatomy of a Model
+To understand how an AI works, we have to look past the "magic" and see it as a functional machine. We can break an AI model down into three core concepts that work together to turn raw data into intelligence.
 
-## Who This Book Is For
+### The Blueprint: Architecture
 
-This book is for engineers building AI applications with local models, private data, and retrieval pipelines. It assumes the reader is comfortable with software systems, APIs, and deployment, but does not assume prior experience with modern information retrieval or model serving.
+The neural network is the mathematical structure at the core of the model: layers of interconnected units that transform input into output. Architecture is the specific design of that neural network. When engineers build models like Llama, they use frameworks such as PyTorch or TensorFlow to assemble modular building blocks into a particular blueprint. That blueprint defines how many layers the network has, how information flows through it, and how the components are organized to handle specific tasks.
 
-The most likely reader is a team that already understands the basic idea of a language model and has seen a simple chatbot demo. What they need next is a practical framework for making that demo useful against real documents, under real latency and privacy constraints.
+### The Knowledge: Parameters
 
-## What Problem This Book Solves
+If the architecture is the empty house, the Parameters are the life inside it. These are the billions of numbers (weights and biases) organized as vectors and matrices. During the training phase, the model adjusts these numbers until they represent "knowledge." These parameters are what the neural network actually learns, and they determine how the model responds to any given input.
 
-Many teams understand the high-level ideas behind local LLMs and RAG, but struggle with system design, tradeoffs, and production reliability. They ask the wrong first question, such as which model has the best benchmark score, when the real question is how retrieval quality, prompt design, and operations interact in a full pipeline.
+### The Execution: Inference
 
-This book treats local AI systems as products and services, not isolated model experiments. A strong system depends on ingestion quality, chunking strategy, reranking, observability, evaluation, and a deployment model that matches the hardware and data environment.
-
-## Why Local LLMs and RAG Matter Together
-
-Running models locally changes the design space. Privacy improves because prompts and documents do not need to leave a controlled environment. Cost can become more predictable because usage is bounded by owned or reserved compute. Customization becomes easier because teams can choose model size, quantization level, and serving engine based on the job to be done.
-
-RAG matters because most useful applications depend on knowledge that is not reliably stored in a base model's weights. Product manuals change. Support policies change. Internal documents differ across organizations. Retrieval makes those facts queryable at runtime, which is usually more robust than trying to fine-tune a model to memorize them.
-
-When these approaches are combined, teams can build systems that are both private and grounded. The model performs reasoning and synthesis while retrieval supplies current, domain-specific context.
-
-## What You Will Build
-
-By the end of this book, the reader should understand how to:
-
-- run and select local language models
-- create embeddings and index documents
-- build a retrieval pipeline
-- improve answer quality with evaluation
-- operate the system in production
-
-The outcome is not a single reference implementation. It is a repeatable mental model for building systems that can answer questions over private corpora, summarize documents with citations, support internal knowledge tools, and serve constrained environments where external API calls are undesirable.
-
-## Key Terms
-
-**Local LLM**  
-A language model run on local hardware or private infrastructure, rather than exclusively through a hosted API.
-
-**Embedding**  
-A dense vector representation used for semantic similarity and retrieval.
-
-**Vector database**  
-A storage and query system optimized for nearest-neighbor retrieval over embeddings.
-
-**RAG**  
-Retrieval-augmented generation: retrieving relevant context and injecting it into generation.
-
-**Chunking**  
-The process of splitting source documents into smaller units that are easier to embed, index, and retrieve.
-
-**Reranking**  
-A second-stage relevance step that reorders retrieved candidates using a more accurate but more expensive model.
-
-## How To Read This Book
-
-The chapters are organized from prerequisites to production practice. Chapter 0 defines the AI and retrieval terminology used throughout the manuscript. The early numbered chapters then define the core building blocks: local inference, embeddings, vector stores, and the basic RAG loop. The middle chapters focus on system design: ingestion, retrieval, reranking, prompt construction, and context management. The later chapters cover evaluation, operations, and emerging directions.
-
-Readers who want a quick implementation path should start with Chapter 0 and then move through Chapters 2 through 5 before returning to evaluation and operations. Readers designing an internal platform should read the book in order, because operational concerns and evaluation strategy influence architecture much earlier than many teams expect.
-
-## What This Book Does Not Assume
-
-This book does not assume that bigger models automatically solve retrieval problems. It does not assume that a vector database alone makes a system accurate. It does not assume that a single benchmark or leaderboard tells you what will work in your domain. Those assumptions lead to systems that appear strong in demos but fail under real document distributions and user behavior.
-
-Instead, the book assumes that useful AI systems are iterative. They are built with feedback loops, explicit measurements, and an understanding that failures may originate in ingestion, retrieval, ranking, prompting, or generation. That perspective is what turns experimentation into engineering.
-
-## Chapter Summary
-
-This chapter introduced the scope of the book, the audience it serves, and the core ideas that connect local LLMs with retrieval-augmented generation. The rest of the manuscript builds from those foundations toward concrete design and operational guidance.
+Finally, Inference is the moment of action. This is the "run-time" phase where the finished model—the architecture populated with its learned parameters—is put to work. When you ask the AI a question, the inference engine runs the input through the neural network to produce an output. It is the act of "cooking the meal" using the recipe (architecture) and the ingredients (parameters) you've prepared.
