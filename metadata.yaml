@@ -6,6 +6,7 @@ lang: "en-US"
 toc: true
 toc-depth: 2
 numbersections: true
+secnumdepth: 1
 fontsize: 11pt
 geometry: margin=1in
 colorlinks: true
@@ -16,4 +17,6 @@ header-includes:
   - \usepackage{float}
   - \makeatletter
   - \renewcommand\section{\@startsection{section}{1}{\z@}{0pt}{16pt}{\raggedright\normalfont\bfseries\fontsize{34}{38}\selectfont}}
+  - \renewcommand\subsection{\@startsection{subsection}{2}{\z@}{18pt}{10pt}{\raggedright\normalfont\bfseries\fontsize{22}{26}\selectfont}}
+  - \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}{16pt}{8pt}{\raggedright\normalfont\bfseries\fontsize{16}{20}\selectfont}}
   - \makeatother
